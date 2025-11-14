@@ -1,5 +1,6 @@
 import './App.css'
 import DotGrid from './components/DotGrid'
+import Header from './components/Header';
 
 function App() {
 
@@ -27,9 +28,9 @@ function App() {
 
 
         {/* Content in front */}
-        <h1 className="relative z-10 text-3xl font-bold underline text-red-700">
-          Hello World!
-        </h1>
+        <div className="relative z-10 h-screen">
+          <Header />
+        </div>
       </div>
     </>
   )

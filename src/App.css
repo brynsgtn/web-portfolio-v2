@@ -17,7 +17,8 @@
     default: true;
     --color-base-100: #0a192f;
     --color-accent: #64ffda;
-    --primary-content: #ccd6f6;
+    --color-primary-content: #ccd6f6;
+    --color-secondary-content: #8892b0;
 }
 
 @plugin "daisyui/theme" {
@@ -25,8 +26,9 @@
     default: false;
     /* light is not default */
     --color-base-100: #e2e8f0;
-    --color-accent: #020c1b;
-    --primary-content: #570df8;
+    --color-accent: #007bff;
+    --color-primary-content: #444452;
+    --color-secondary-content: #444452;
     
 }
 

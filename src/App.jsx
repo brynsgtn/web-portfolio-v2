@@ -1,6 +1,7 @@
 import './App.css'
-import DotGrid from './components/DotGrid'
+import DotGrid from './components/animations/DotGrid'
 import Header from './components/Header';
+import HeroSection from './components/HeroSection';
 import { useThemeStore } from './store/themeStore';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
  const { theme } = useThemeStore();
   return (
     <>
-      <div data-theme={theme} className="h-screen bg-base-100 relative">
+      <div data-theme={theme} className="min-h-screen bg-base-100 relative">
         {/* DotGrid background */}
         {
           theme === 'dark' &&
@@ -29,8 +30,13 @@ function App() {
 
 
         {/* Content in front */}
-        <div className="relative z-10 h-screen">
+        <div className="relative z-10 min-h-screen">
           <Header />
+          <div className='max-w-6xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 border border-red-500'>
+            {/* Spacer to push content below header */}
+            <div className="h-20"></div>
+                   <HeroSection />
+          </div>
         </div>
       </div>
     </>

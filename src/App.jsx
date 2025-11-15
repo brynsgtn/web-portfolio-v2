@@ -1,13 +1,14 @@
 import './App.css'
 import DotGrid from './components/DotGrid'
 import Header from './components/Header';
+import { useThemeStore } from './store/themeStore';
 
 function App() {
 
-  const theme = 'dark';
+ const { theme } = useThemeStore();
   return (
     <>
-      <div data-theme={theme} className="h-screen bg-base-300 relative">
+      <div data-theme={theme} className="h-screen bg-base-100 relative">
         {/* DotGrid background */}
         {
           theme === 'dark' &&
@@ -15,9 +16,9 @@ function App() {
             <DotGrid
               dotSize={5}
               gap={15}
-              baseColor="#271e37"
-              activeColor="#5227FF"
-              proximity={120}
+              baseColor="#112240"
+              activeColor="#64ffda"
+              proximity={180}
               shockRadius={250}
               shockStrength={5}
               resistance={750}

@@ -6,7 +6,7 @@ import { useThemeStore } from "../store/themeStore"
 const Header = () => {
     const { toggleTheme, theme } = useThemeStore();
     return (
-        <div className="navbar bg-base-100 h-24 px-10 z-20">
+        <div className="navbar bg-transparent h-24 px-10 absolute">
             <div className="flex-1">
                 <p className="text-xl font-medium font-inter text-accent font-stretch-expanded tracking-wider logo cursor-pointer hover:text-(--primary-content) transition duration-300 ease-in-out">
                     &lt;brynsgtn/&gt;

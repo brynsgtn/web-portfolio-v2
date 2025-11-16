@@ -2,18 +2,20 @@ import './App.css'
 import DotGrid from './components/animations/DotGrid'
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
+import FloatingShape from './components/animations/FloatingShape';
 import { useThemeStore } from './store/themeStore';
+import AboutMe from './components/AboutMe';
 
 function App() {
 
- const { theme } = useThemeStore();
+  const { theme } = useThemeStore();
   return (
     <>
-      <div data-theme={theme} className="min-h-screen bg-base-100 relative">
-        {/* DotGrid background */}
-        {
-          theme === 'dark' &&
-          <div className="absolute inset-0 z-0">
+      <div data-theme={theme} className="min-h-screen relative">
+        {/* Background */}
+
+        <div className="absolute inset-0 z-0">
+          {theme === 'dark' ? (
             <DotGrid
               dotSize={5}
               gap={15}
@@ -25,17 +27,42 @@ function App() {
               resistance={750}
               returnDuration={1.5}
             />
-          </div>
-        }
+          ) : (
+            <>
+              <FloatingShape
+                color="bg-stone-800"
+                size="w-64 h-64"
+                top="-5%"
+                left="10%"
+                delay={0}
+              />
+              <FloatingShape
+                color="bg-stone-800"
+                size="w-48 h-48"
+                top="70%"
+                left="80%"
+                delay={5}
+              />
+              <FloatingShape
+                color="bg-stone-800"
+                size="w-32 h-32"
+                top="40%"
+                left="-10%"
+                delay={2}
+              />
+            </>
 
+          )}
+
+        </div>
 
         {/* Content in front */}
         <div className="relative z-10 min-h-screen">
           <Header />
-          <div className='max-w-6xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 border border-red-500'>
-            {/* Spacer to push content below header */}
-            <div className="h-20"></div>
-                   <HeroSection />
+
+          <div className='max-w-6xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 '>
+            <HeroSection />
+            <AboutMe />
           </div>
         </div>
       </div>

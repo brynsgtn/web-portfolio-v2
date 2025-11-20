@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import FloatingShape from './components/animations/FloatingShape';
 import { useThemeStore } from './store/themeStore';
 import AboutMe from './components/AboutMe';
+import WhatIDo from './components/WhatIDo';
 
 function App() {
 
@@ -57,14 +58,16 @@ function App() {
         </div>
 
         {/* Content in front */}
-        <div className="relative z-10 min-h-screen">
-          <Header />
+          <div className="relative z-10 min-h-screen">
+            <Header />
 
-          <div className='max-w-6xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 '>
-            <HeroSection />
-            <AboutMe />
+            <div className='max-w-7xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 '>
+              <HeroSection />
+              <AboutMe />
+              <WhatIDo />
+            </div>
           </div>
-        </div>
+
       </div>
     </>
   )

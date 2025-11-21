@@ -20,6 +20,7 @@ import { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import StarBorder from "./animations/StarBorder";
 import TrueFocus from "./animations/TrueFocus";
+import { useThemeStore } from "../store/themeStore";
 
 const techLogos = [
     { node: <SiReact />, title: "React" },
@@ -143,7 +144,7 @@ const AccordionItem = ({ item, isOpen, onToggle }) => {
 };
 const WhatIDo = () => {
     const [openAccordion, setOpenAccordion] = useState('');
-
+    const { theme } = useThemeStore();
     const handleToggle = (id) => {
         setOpenAccordion(openAccordion === id ? null : id);
     };
@@ -165,8 +166,8 @@ const WhatIDo = () => {
     return (
         <>
             {/* Tech Stack Section */}
-            <div className="min-h-screen pt-20 border border-red-400 ">
-                <h1 className="text-primary-content text-4xl font-bold mb-10 border border-red-400 py-5 relative">
+            <div className="min-h-screen pt-20 ">
+                <h1 className="text-primary-content text-4xl font-bold mb-10  py-5 relative">
                     What I Do
                     <span className="absolute left-0 bottom-0 w-24 border-b-2 border-primary-content"></span>
                 </h1>
@@ -203,7 +204,7 @@ const WhatIDo = () => {
                             hoverSpeed={0}
                             scaleOnHover
                             ariaLabel="Technology partners"
-                            className="rounded-lg overflow-hidden shadow-lg bg-transparent w-fit"
+                            className="rounded-lg overflow-hidden bg-transparent w-fit"
                         />
 
                     </div>
@@ -213,11 +214,13 @@ const WhatIDo = () => {
                         sentence="Code. Learn. Evolve."
                         manualMode={false}
                         blurAmount={15}
-                        borderColor="cyan"
-                        glowColor="rgba(0, 255, 0, 0.6)"
+                        borderColor={theme === 'dark' ? '#64ffda' : '#007bff'}
+                        glowColor={theme === 'dark' ? '#64ffda' : '#007bff'}
                         animationDuration={2}
                         pauseBetweenAnimations={1.5}
                     />
+
+
                 </div>
 
             </div>

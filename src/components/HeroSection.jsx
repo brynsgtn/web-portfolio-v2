@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <div className="min-h-screen pt-30 md:pt-40 lg:pt-50 relative">
-      <p className="text-success tracking-wider font-light text-xl mb-5">
+      <p className="text-success tracking-wider font-light text-3xl mb-5">
         Hi, my name is
       </p>
       <h1 className="text-5xl md:text-7xl font-semibold text-primary-content mb-5">

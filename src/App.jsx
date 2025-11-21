@@ -6,6 +6,9 @@ import FloatingShape from './components/animations/FloatingShape';
 import { useThemeStore } from './store/themeStore';
 import AboutMe from './components/AboutMe';
 import WhatIDo from './components/WhatIDo';
+import WhatIBuilt from './components/WhatIBuilt';
+import OtherProjects from './pages/OtherProjects';
+import { Route, Routes } from 'react-router';
 
 function App() {
 
@@ -58,15 +61,23 @@ function App() {
         </div>
 
         {/* Content in front */}
-          <div className="relative z-10 min-h-screen">
-            <Header />
+        <div className="relative z-10 min-h-screen">
+          <Header />
 
-            <div className='max-w-7xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 '>
-              <HeroSection />
-              <AboutMe />
-              <WhatIDo />
-            </div>
+          <div className='max-w-7xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 '>
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <HeroSection />
+                  <AboutMe />
+                  <WhatIDo />
+                  <WhatIBuilt />
+                </>
+              } />
+              <Route path="/other-projects" element={<OtherProjects />} />
+            </Routes>
           </div>
+        </div>
 
       </div>
     </>

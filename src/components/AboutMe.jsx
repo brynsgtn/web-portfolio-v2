@@ -10,7 +10,7 @@ const AboutMe = () => {
 
     return (
         <>
-            <div className="min-h-screen pt-10">
+            <div className="min-h-screen pt-10 xl:px-50">
                 <h1 className="text-primary-content text-4xl font-bold  py-5 relative">
                     About Me
                     <span className="absolute left-0 bottom-0 w-24 border-b-2 border-primary-content"></span>

@@ -22,7 +22,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-30 md:pt-40 lg:pt-50 relative">
+    <div className="min-h-screen pt-30 md:pt-40 lg:pt-50 xl:px-50 xl:pt-60 relative">
       <p className="text-success tracking-wider font-light text-3xl mb-5">
         Hi, my name is
       </p>

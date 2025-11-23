@@ -37,8 +37,8 @@ const WhatIBuilt = () => {
     ];
 
     return (
-        <div className="min-h-screen  text-white py-20 px-4">
-            <div className="max-w-7xl mx-auto">
+        <div className="min-h-screen  text-primary-content py-20 px-4 xl:px-50 ">
+            <div className="max-w-7xl">
                 <h1 className="text-primary-content text-4xl font-bold mb-10  py-5 relative">
                     What I Built
                     <span className="absolute left-0 bottom-0 w-24 border-b-2 border-primary-content"></span>

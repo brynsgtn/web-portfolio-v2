@@ -9,6 +9,7 @@ import WhatIDo from './components/WhatIDo';
 import WhatIBuilt from './components/WhatIBuilt';
 import OtherProjects from './pages/OtherProjects';
 import { Route, Routes } from 'react-router';
+import ProfessionalBackground from './components/ProfessionalBackground';
 
 function App() {
 
@@ -64,7 +65,7 @@ function App() {
         <div className="relative z-10 min-h-screen">
           <Header />
 
-          <div className='max-w-7xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 '>
+          <div className='max-w-8xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32 '>
             <Routes>
               <Route path="/" element={
                 <>
@@ -72,6 +73,7 @@ function App() {
                   <AboutMe />
                   <WhatIDo />
                   <WhatIBuilt />
+                  <ProfessionalBackground />
                 </>
               } />
               <Route path="/other-projects" element={<OtherProjects />} />

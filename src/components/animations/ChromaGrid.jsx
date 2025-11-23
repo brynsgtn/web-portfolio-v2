@@ -79,7 +79,9 @@ const ChromaGrid = ({ items, className = '', radius = 400, damping = 0.45, fadeO
                     <article
                         key={i}
                         onMouseMove={handleCardMove}
-                        className="group relative w-full max-w-7xl mx-auto rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:border-white/20 bg-black/40 backdrop-blur-sm"
+                        className={`group relative w-full max-w-4xl rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:border-white/20 bg-black/40 backdrop-blur-sm
+      ${i % 2 === 0 ? 'mr-auto' : 'ml-auto'}
+    `}
                         style={{
                             '--card-border': project.accentColor || '#3B82F6',
                             '--spotlight-color': 'rgba(255,255,255,0.1)'
@@ -93,9 +95,9 @@ const ChromaGrid = ({ items, className = '', radius = 400, damping = 0.45, fadeO
                             }}
                         />
 
-                        <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-0`}>
+                        <div className={`flex flex-col ${isEven ? 'lg:flex-row lg:justify-items-start' : 'lg:flex-row-reverse'} gap-0`}>
                             {/* Project image/gif */}
-                            <div className="relative z-20 w-full lg:w-[55%] h-[200px] md:h-[220px] lg:h-[450px] flex-shrink-0 overflow-hidden">
+                            <div className="relative z-20 w-full lg:w-[50%] h-[200px] md:h-[250px] lg:h-[500px] flex-shrink-0 overflow-hidden">
                                 <img
                                     src={project.image}
                                     alt={project.title}
@@ -114,7 +116,7 @@ const ChromaGrid = ({ items, className = '', radius = 400, damping = 0.45, fadeO
                             </div>
 
                             {/* Content */}
-                            <div className="relative z-20 w-full lg:w-[45%] flex flex-col justify-center p-4 md:p-5 lg:p-10">
+                            <div className="relative z-20 w-full lg:w-[50%] flex flex-col justify-center p-4 md:p-5 lg:p-10">
                                 <div className="mb-3 lg:mb-5">
                                     <div className="flex items-center gap-2 lg:gap-3 mb-2 lg:mb-3">
                                         <div

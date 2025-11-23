@@ -166,16 +166,16 @@ const WhatIDo = () => {
     return (
         <>
             {/* Tech Stack Section */}
-            <div className="min-h-screen pt-20 ">
+            <div className="min-h-screen pt-20 xl:px-50">
                 <h1 className="text-primary-content text-4xl font-bold mb-10  py-5 relative">
                     What I Do
                     <span className="absolute left-0 bottom-0 w-24 border-b-2 border-primary-content"></span>
                 </h1>
                 {/* Accordion */}
-                <div className="lg:flex justify-around items-center">
+                <div className=" lg:flex justify-around items-center">
                     <div>
                         <StarBorder
-                            className="backdrop-blur-sm max-w-2xl w-full mx-auto shadow-2xl"
+                            className="backdrop-blur-sm max-w-4xl 2xl:w-500 x mx-auto shadow-2xl"
                             color="cyan"
                             speed="5s"
                         >

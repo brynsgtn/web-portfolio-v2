@@ -222,6 +222,7 @@ const ProfessionalBackground = () => {
                 <span className="absolute left-0 bottom-0 w-24 border-b-2 border-primary-content"></span>
             </h1>
 
+
             {/* Filter Buttons */}
             <div className="flex gap-2 flex-wrap mt-10 mb-20">
                 <button
@@ -294,14 +295,16 @@ const ProfessionalBackground = () => {
                                 <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </a>
                         )}
-
                         {item.type === 'experience' && (
-                            <p className={`mt-2 text-sm opacity-70 text-left`}>
+                            <ul className="mt-2 text-sm opacity-70 text-left list-none">
                                 {item.data.responsibilities.map((resp, i) => (
-                                    <li key={i} className='my-2'><span className="text-success">▹</span> {resp}</li>
+                                    <li key={i} className='my-2'>
+                                        <span className="text-success">▹</span> {resp}
+                                    </li>
                                 ))}
-                            </p>
+                            </ul>
                         )}
+
                     </TimelineItem>
                 ))}
             </ul>

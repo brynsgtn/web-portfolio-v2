@@ -10,6 +10,7 @@ import WhatIBuilt from './components/WhatIBuilt';
 import OtherProjects from './pages/OtherProjects';
 import { Route, Routes } from 'react-router';
 import ProfessionalBackground from './components/ProfessionalBackground';
+import ContactMe from './components/ContactMe';
 
 function App() {
 
@@ -74,6 +75,7 @@ function App() {
                   <WhatIDo />
                   <WhatIBuilt />
                   <ProfessionalBackground />
+                  <ContactMe />
                 </>
               } />
               <Route path="/other-projects" element={<OtherProjects />} />

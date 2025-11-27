@@ -31,8 +31,8 @@ const WhatIBuilt = () => {
       description: "A secure attendance system with JWT auth, role based access, automated onboarding, Mailtrap emails, and a responsive light and dark UI.",
       tech: ["MERN", "JWT", "Framer Motion", "Mailtrap", "Tailwind CSS", "Axios", "Zustand", "Render"],
       accentColor: theme === "light" ? "#007bff" : "#64ffda",
-      github: "https://github.com",
-      demo: "https://example.com"
+      github: "https://github.com/brynsgtn/attendance-system-webapp",
+      demo: "https://intern-attendance-webapp.onrender.com/"
     }
   ];
 

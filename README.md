@@ -16,7 +16,7 @@ Welcome to the second version of my personal web developer portfolio! This updat
 
 ## 🚀 Live Demo
 
-Explore the latest version: [brynsgtn.dev](https://web-portfolio-v2-git-main-bryansuguitan17s-projects.vercel.app/)
+Explore the latest version: [brynsgtn.dev](https://www.brynsgtn.online/)
 
 ---
 

@@ -8,7 +8,7 @@ const WhatIBuilt = () => {
   const { theme } = useThemeStore();
   const projects = [
     {
-      image: "./public/plateaccess.gif",
+      image: "/plateaccess.gif",
       title: "PlateAccess",
       description: "A license plate recognition and access control system with real time entry monitoring and automated access logging. Integrated with a Python Flask LPR API.",
       tech: ["MERN", "Socket.io", "JWT", "Tailwind CSS", "Axios", "Zustand", "Render"],
@@ -17,7 +17,7 @@ const WhatIBuilt = () => {
       demo: "https://plate-access.onrender.com/"
     },
     {
-      image: "./public/maritext.gif",
+      image: "/maritext.gif",
       title: "Maritext",
       description: "A real time messaging web app with email verification, password reset, contact management, delivery states, typing indicators, unsend, and invite a friend features.",
       tech: ["MERN", "Socket.io", "Mailtrap", "Cloudinary", "JWT", "Tailwind CSS", "Axios", "Zustand", "Render"],
@@ -26,7 +26,7 @@ const WhatIBuilt = () => {
       demo: "https://maritext-realtime-chat-app.onrender.com/"
     },
     {
-      image: "./public/attendancesystem.gif",
+      image: "/attendancesystem.gif",
       title: "Attendance System",
       description: "A secure attendance system with JWT auth, role based access, automated onboarding, Mailtrap emails, and a responsive light and dark UI.",
       tech: ["MERN", "JWT", "Framer Motion", "Mailtrap", "Tailwind CSS", "Axios", "Zustand", "Render"],

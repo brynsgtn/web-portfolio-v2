@@ -1,7 +1,6 @@
-
+import { useRef } from "react";
 import { ExternalLink, Github, ArrowLeft } from 'lucide-react';
-
-
+import { motion, useInView } from "framer-motion";
 const projects = [
     {
         year: '2025',
@@ -38,7 +37,6 @@ const projects = [
         github: 'https://github.com/brynsgtn/toDoList',
         live: 'https://to-do-list-brynsgtn.netlify.app/'
     },
-
     {
         year: '2024',
         name: 'Web Portfolio v1',
@@ -120,20 +118,33 @@ const projects = [
 
 
 const OtherProjects = () => {
+    const sectionRef = useRef(null);
+    const inView = useInView(sectionRef, { once: false, margin: "-100px 0px -100px 0px" });
+
     return (
-        <div className='min-h-screen py-20 lg:py-30'>
-            <h1 className="text-primary-content text-4xl lg:text-5xl font-semibold mb-10 py-5 relative">
+        <div ref={sectionRef} className='min-h-screen py-20 lg:py-30 px-4 xl:px-50'>
+            <motion.h1
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ duration: 0.7 }}
+                className="text-primary-content text-4xl lg:text-5xl font-semibold mb-10 py-5 relative"
+            >
                 Other Projects
                 <span className="absolute left-0 bottom-0 w-24 border-b-2 border-primary-content"></span>
-            </h1>
-            <p className="text-success tracking-wider font-light mb-8 text-lg">
+            </motion.h1>
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="text-success tracking-wider font-light mb-8 text-lg"
+            >
                 A collection of other projects I've worked on
-            </p>
+            </motion.p>
 
-            <div className="overflow-x-auto">
+            <div className="">
                 <table className="w-full">
                     <thead>
-                        <tr className="">
+                        <tr>
                             <th className="px-6 py-4 text-left text-sm font-semibold text-secondary-content">
                                 Year
                             </th>
@@ -148,25 +159,21 @@ const OtherProjects = () => {
                             </th>
                         </tr>
                     </thead>
-                    <tbody className="">
+                    <tbody>
                         {projects.map((project, index) => (
-                            <tr
+                            <motion.tr
                                 key={index}
-                                className=" hover:bg-base-200 transition-colors"
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                                transition={{ duration: 0.5, delay: index * 0.05 }}
+                                className="hover:bg-base-200 transition-colors"
                             >
-                                <td className="px-6 py-4 text-success font-normal">
-                                    {project.year}
-                                </td>
-                                <td className="px-6 py-4 text-primary-content font-semibold">
-                                    {project.name}
-                                </td>
+                                <td className="px-6 py-4 text-success font-normal">{project.year}</td>
+                                <td className="px-6 py-4 text-primary-content font-semibold">{project.name}</td>
                                 <td className="px-6 py-4">
                                     <div className="flex flex-wrap gap-2">
                                         {project.builtWith.map((tech, techIndex) => (
-                                            <span
-                                                key={techIndex}
-                                                className="px-3 py-1 text-success text-xs rounded-full border border-success/30"
-                                            >
+                                            <span key={techIndex} className="px-3 py-1 text-success text-xs rounded-full border border-success/30">
                                                 {tech}
                                             </span>
                                         ))}
@@ -198,18 +205,22 @@ const OtherProjects = () => {
                                         )}
                                     </div>
                                 </td>
-                            </tr>
+                            </motion.tr>
                         ))}
                     </tbody>
                 </table>
             </div>
-            <button
+
+            <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
                 onClick={() => window.history.back()}
                 className="inline-flex items-center gap-2 mb-8 px-4 py-2 mt-20 text-success hover:text-primary-content transition-colors group hover:cursor-pointer"
             >
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                 <span className="font-medium">Back</span>
-            </button>
+            </motion.button>
         </div>
     );
 };
